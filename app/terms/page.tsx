@@ -19,7 +19,7 @@ export default function TermsPage() {
               <div className="space-y-2">
                 <h2 className="text-base font-semibold text-foreground">Acceptance</h2>
                 <p>
-                  By engaging RiverERP services, you agree to these terms and any project-specific statements of work.
+                  By engaging GSons IT Solutions services, you agree to these terms and any project-specific statements of work.
                 </p>
               </div>
               <div className="space-y-2">

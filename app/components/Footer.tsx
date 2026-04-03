@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-border/70 pt-6 text-center text-xs text-muted-foreground">
-          <span>Copyright {currentYear} Managed IT Services. All rights reserved.</span>
+          <span>Copyright {currentYear} GSons IT Solutions Inc. All rights reserved.</span>
         </div>
       </div>
     </footer>
