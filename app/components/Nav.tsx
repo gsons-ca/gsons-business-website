@@ -1,12 +1,102 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function Nav() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveMenu(null);
+        setActiveSubCategory(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveMenu(null);
+        setActiveSubCategory(null);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  const megaMenuContent: Record<string, {
+    subCategories: { name: string, links: { title: string, desc: string }[] }[]
+  }> = {
+    'IT Services': {
+      subCategories: [
+        { name: 'Managed IT Services', links: [{ title: '24/7 Helpdesk', desc: 'Instant remote technical support for your team.' }, { title: 'NOC Monitoring', desc: 'Proactive 24/7 network and server oversight.' }, { title: 'Patch Management', desc: 'Automated security updates for all endpoints.' }, { title: 'IT Asset Management', desc: 'Inventory tracking and hardware lifecycle planning.' }, { title: 'Technical Support', desc: 'Comprehensive troubleshooting for all business systems.' }, { title: 'Remote IT Support', desc: 'Fast, secure remote assistance for offsite employees.' }] },
+        { name: 'Onsite & Field Support', links: [{ title: 'Emergency Dispatch', desc: 'Rapid onsite response for critical failures.' }, { title: 'Hardware Installation', desc: 'Professional setup of workstations and servers.' }, { title: 'Structured Cabling', desc: 'Clean, certified data and fiber installations.' }, { title: 'Onsite IT Support', desc: 'Regularly scheduled in-person technical maintenance.' }] },
+        { name: 'IT Consulting', links: [{ title: 'vCIO Strategy', desc: 'Executive-level technology leadership and planning.' }, { title: 'IT Roadmap', desc: 'Strategic multi-year budgeting and growth.' }, { title: 'Digital Transformation', desc: 'Modernizing legacy workflows for efficiency.' }, { title: 'IT Audit', desc: 'In-depth assessment of security and efficiency.' }] },
+        { name: 'Network & Connectivity', links: [{ title: 'Managed WiFi', desc: 'Seamless, high-speed wireless across your office.' }, { title: 'SD-WAN Solutions', desc: 'Optimized multi-site business connectivity.' }, { title: 'Fiber Internet', desc: 'High-speed dedicated business-grade internet.' }, { title: 'VoIP Services', desc: 'Cloud-based business phone and communication systems.' }] },
+        { name: 'Business Continuity', links: [{ title: 'Disaster Recovery', desc: 'Rapid data restoration after a critical event.' }, { title: 'Cloud Backup', desc: 'Immutable offsite storage for business data.' }, { title: 'Backup & Recovery', desc: 'Ensuring your data is safe and accessible 24/7.' }] },
+        { name: 'Procurement Services', links: [{ title: 'Hardware Sourcing', desc: 'Enterprise pricing on laptops, servers, and parts.' }, { title: 'Software Licensing', desc: 'Managing O365, Adobe, and CAD subscriptions.' }, { title: 'IT Procurement', desc: 'Strategic purchasing aligned with business goals.' }] },
+        { name: 'Infrastructure Projects', links: [{ title: 'Office Relocation', desc: 'Seamlessly moving your IT to a new location.' }, { title: 'Server Refresh', desc: 'Upgrading aged hardware to modern platforms.' }, { title: 'Co-Location', desc: 'Secure offsite housing for your physical servers.' }] }
+      ]
+    },
+    'Cloud': {
+      subCategories: [
+        { name: 'Cloud Infrastructure', links: [{ title: 'Azure Management', desc: 'Complete Microsoft cloud administration.' }, { title: 'AWS Solutions', desc: 'Scalable Amazon Web Services environments.' }, { title: 'Managed Cloud Services', desc: 'End-to-end management of your cloud ecosystem.' }] },
+        { name: 'Modern Workplace', links: [{ title: 'Microsoft 365', desc: 'Full administration of Teams and Outlook.' }, { title: 'SharePoint Online', desc: 'Centralized cloud document management.' }, { title: 'Google Workspace', desc: 'Cloud-native collaboration and email.' }] },
+        { name: 'Virtualization', links: [{ title: 'Azure Virtual Desktop', desc: 'Remote PC access from any device.' }, { title: 'Windows 365', desc: 'Dedicated cloud-based personal computers.' }, { title: 'Cloud Desktop', desc: 'Virtual workstations for high-performance needs.' }] },
+        { name: 'Cloud Mobility', links: [{ title: 'Managed Desktop/VDI', desc: 'Scalable virtual desktop infrastructure.' }, { title: 'Cloud Migration', desc: 'Moving your on-premise assets to the cloud.' }] },
+        { name: 'Cloud Strategy', links: [{ title: 'Cloud Consulting', desc: 'Strategic planning for cloud adoption.' }, { title: 'Cloud Hosting', desc: 'Reliable hosting for web and business apps.' }] },
+        { name: 'Cloud Identity', links: [{ title: 'Cloud Providers', desc: 'Expertise across major cloud platforms.' }, { title: 'Identity Mgmt', desc: 'Secure access control for cloud resources.' }] }
+      ]
+    },
+    'Cyber': {
+      subCategories: [
+        { name: 'Threat Detection', links: [{ title: 'Managed EDR', desc: '24/7 endpoint detection and response.' }, { title: 'MDR Services', desc: 'Real-time threat hunting and mitigation.' }, { title: 'Managed SOC', desc: 'Security Operations Center as a Service.' }] },
+        { name: 'Network Defense', links: [{ title: 'Managed Firewall', desc: 'Perimeter protection and secure VPNs.' }, { title: 'Advanced Firewalls', desc: 'Next-gen protection against modern threats.' }, { title: 'Network Security', desc: 'Comprehensive defense for your local network.' }] },
+        { name: 'Compliance & Audit', links: [{ title: 'PIPEDA Compliance', desc: 'Meeting Canadian privacy law standards.' }, { title: 'IT Security Audit', desc: 'In-depth review of your security posture.' }, { title: 'Compliance Mgmt', desc: 'Ensuring you meet industry-specific regulations.' }] },
+        { name: 'Security Strategy', links: [{ title: 'VCISO', desc: 'Expert security leadership without the overhead.' }, { title: 'Vendor Audit', desc: 'Assessing the security of your third-party partners.' }, { title: 'Security Awareness', desc: 'Empowering employees to spot cyber threats.' }] },
+        { name: 'Technical Assessment', links: [{ title: 'Penetration Testing', desc: 'Ethical hacking to find system weaknesses.' }, { title: 'Security Assessment', desc: 'Identifying risks across your entire infrastructure.' }, { title: 'Vulnerability Mgmt', desc: 'Scanning for and patching security holes.' }] },
+        { name: 'Advanced Protection', links: [{ title: 'SIEM', desc: 'Security Information and Event Management.' }, { title: 'Phishing Protection', desc: 'Blocking deceptive email-based attacks.' }, { title: 'Dark Web Monitoring', desc: 'Tracking leaked credentials on the dark web.' }] }
+      ]
+    },
+    'Industries': {
+      subCategories: [
+        { name: 'Industrial & Energy', links: [{ title: 'Oil & Gas IT', desc: 'Tech for the Peace Region energy sector.' }, { title: 'Mining Technology', desc: 'Connectivity for remote exploration sites.' }, { title: 'Energy & Utilities', desc: 'Robust IT for the utility sector.' }] },
+        { name: 'Construction & EPC', links: [{ title: 'Site Connectivity', desc: 'Rapid deployment internet for jobsites.' }, { title: 'Construction IT', desc: 'Streamlining project and site management.' }, { title: 'Architecture IT', desc: 'High-performance computing for design.' }] },
+        { name: 'Healthcare & Life Sciences', links: [{ title: 'Healthcare IT', desc: 'Secure medical record infrastructure.' }, { title: 'Dental Practice IT', desc: 'Specialized support for clinic systems.' }, { title: 'Life Sciences', desc: 'IT for research and biotech organizations.' }, { title: 'Radiology IT', desc: 'Specific tech support for medical imaging.' }] },
+        { name: 'Professional Services', links: [{ title: 'Legal Firm IT', desc: 'Secure document and case management.' }, { title: 'Accounting Support', desc: 'Tax and audit software infrastructure.' }, { title: 'Marketing IT', desc: 'Tech for creative and digital agencies.' }] },
+        { name: 'Public & Non-Profit', links: [{ title: 'Non-Profit IT', desc: 'Cost-effective community tech solutions.' }, { title: 'Education Support', desc: 'IT systems for schools and learning.' }, { title: 'Municipal IT', desc: 'Local government technology support.' }] },
+        { name: 'Finance & Real Estate', links: [{ title: 'Banking & Financial', desc: 'Secure tech for financial institutions.' }, { title: 'Real Estate IT', desc: 'Scalable tech for agents and brokerages.' }, { title: 'Wealth Management', desc: 'Secure data hosting for financial planners.' }] }
+      ]
+    },
+    'Locations': {
+      subCategories: [
+        { name: 'British Columbia', links: [{ title: 'Fort St. John', desc: 'Local support for the Peace Region.' }, { title: 'Vancouver', desc: 'Serving the Lower Mainland.' }, { title: 'Dawson Creek', desc: 'Mile Zero onsite IT services.' }, { title: 'Kelowna', desc: 'Okanagan Valley tech support.' }, { title: 'Victoria', desc: 'Island-wide managed services.' }, { title: 'Prince George', desc: 'Northern BC hub support.' }] },
+        { name: 'Alberta', links: [{ title: 'Calgary', desc: 'Energy and tech corridor support.' }, { title: 'Edmonton', desc: 'Capital region managed IT.' }, { title: 'Grande Prairie', desc: 'Serving the Alberta Peace Country.' }, { title: 'Red Deer', desc: 'Central corridor business tech.' }, { title: 'Lethbridge', desc: 'Southern Alberta local support.' }, { title: 'Medicine Hat', desc: 'Regional business IT services.' }] },
+        { name: 'Ontario', links: [{ title: 'Toronto', desc: 'GTA enterprise IT management.' }, { title: 'Ottawa', desc: 'Capital region business services.' }, { title: 'Mississauga', desc: 'Industrial and tech hub support.' }, { title: 'Hamilton', desc: 'Steel city industrial IT.' }, { title: 'London', desc: 'Southwestern ON coverage.' }, { title: 'Brampton', desc: 'Logistics and tech support.' }, { title: 'Kitchener/Waterloo', desc: 'Tech sector managed services.' }, { title: 'Markham', desc: 'Enterprise IT for tech corridors.' }] },
+        { name: 'Quebec', links: [{ title: 'Montreal', desc: 'Bilingual managed IT services.' }, { title: 'Quebec City', desc: 'Provincial capital tech support.' }, { title: 'Laval', desc: 'Greater Montreal area coverage.' }, { title: 'Gatineau', desc: 'National Capital Region support.' }, { title: 'Longueuil', desc: 'South shore business IT services.' }, { title: 'Sherbrooke', desc: 'Eastern Townships tech support.' }] },
+        { name: 'Saskatchewan', links: [{ title: 'Saskatoon', desc: 'Bridge City managed services.' }, { title: 'Regina', desc: 'Southern SK tech support.' }, { title: 'Prince Albert', desc: 'Northern gateway services.' }, { title: 'Moose Jaw', desc: 'Regional business IT support.' }] },
+        { name: 'Manitoba', links: [{ title: 'Winnipeg', desc: 'Central Canada tech hub.' }, { title: 'Brandon', desc: 'Western MB business support.' }, { title: 'Steinbach', desc: 'Local community IT services.' }] },
+        { name: 'Atlantic Canada', links: [{ title: 'Halifax, NS', desc: 'Coastal tech and shipping support.' }, { title: 'Moncton, NB', desc: 'Atlantic distribution hub IT.' }, { title: 'St. John\'s, NL', desc: 'Easternmost tech support.' }, { title: 'Charlottetown, PEI', desc: 'Island-wide business tech.' }, { title: 'Fredericton, NB', desc: 'Capital region IT services.' }, { title: 'Saint John, NB', desc: 'Port city industrial IT.' }] },
+        { name: 'Territories', links: [{ title: 'Whitehorse, YK', desc: 'Northern hub managed services.' }, { title: 'Yellowknife, NWT', desc: 'Territorial capital tech support.' }, { title: 'Iqaluit, NU', desc: 'Arctic circle remote support.' }] }
+      ]
+    },
+    'About': {
+      subCategories: [
+        { name: 'Company', links: [{ title: 'Our Story', desc: 'From local roots to national MSP.' }, { title: 'Our Values', desc: 'Reliability, transparency, and trust.' }, { title: 'Leadership', desc: 'Meet the engineers behind GSons.' }, { title: 'Our Vision', desc: 'The future of managed IT services.' }] },
+        { name: 'Resources', links: [{ title: 'IT Blog', desc: 'Tech tips for business growth.' }, { title: 'Case Studies', desc: 'Success stories from our partners.' }, { title: 'Whitepapers', desc: 'Deep dives into cybersecurity.' }, { title: 'FAQ', desc: 'Common questions about managed IT.' }] },
+        { name: 'Careers', links: [{ title: 'Join the Team', desc: 'Open roles for technical experts.' }, { title: 'Company Culture', desc: 'Why we love what we do.' }, { title: 'Employee Benefits', desc: 'Supporting our team members.' }] },
+        { name: 'Partnerships', links: [{ title: 'Microsoft Gold', desc: 'Certified Tier-1 Cloud partner.' }, { title: 'Dell Premier', desc: 'Authorized hardware solutions.' }, { title: 'HubSpot Elite', desc: 'CRM implementation experts.' }] },
+        { name: 'Legal', links: [{ title: 'Privacy Policy', desc: 'How we protect your business.' }, { title: 'Terms of Service', desc: 'Transparent service agreements.' }, { title: 'Service Level Agreement', desc: 'Our commitment to uptime and response.' }] }
+      ]
+    }
+  };
 
   const toggleMenu = (menu: string) => {
     if (activeMenu === menu) {
@@ -14,98 +104,24 @@ export default function Nav() {
       setActiveSubCategory(null);
     } else {
       setActiveMenu(menu);
-      setActiveSubCategory(megaMenuContent[menu].subCategories[0].name);
-    }
-  };
-
-  const megaMenuContent: Record<string, {
-    subCategories: { name: string, links: { title: string, desc: string }[] }[]
-  }> = {
-    'IT Services': {
-      subCategories: [
-        {
-          name: 'Managed Services',
-          links: [
-            { title: '24/7 Helpdesk', desc: 'Remote support for your entire team.' },
-            { title: 'Network Monitoring', desc: 'Real-time infrastructure oversight.' },
-            { title: 'Backup & Recovery', desc: 'Disaster proofing your business data.' }
-          ]
-        },
-        {
-          name: 'Consulting',
-          links: [
-            { title: 'IT Roadmap', desc: 'Strategic planning for the next 5 years.' },
-            { title: 'vCISO Services', desc: 'Executive level security leadership.' }
-          ]
-        },
-        {
-          name: 'Saksham',
-          links: [
-            { title: 'IT Roadmap', desc: 'Strategic planning for the next 5 years.' },
-            { title: 'vCISO Services', desc: 'Executive level security leadership.' }
-          ]
-        }
-      ]
-    },
-    'Cybersecurity': {
-      subCategories: [
-        {
-          name: 'Security Stack',
-          links: [
-            { title: 'Threat Detection', desc: 'AI-driven monitoring and real-time alerts.' },
-            { title: 'Compliance', desc: 'Meeting PIPEDA and industry standards.' },
-            { title: 'Penetration Testing', desc: 'Finding vulnerabilities proactively.' }
-          ]
-        },
-        {
-          name: 'Identity',
-          links: [
-            { title: 'MFA Setup', desc: 'Multi-factor authentication deployment.' },
-            { title: 'Zero Trust', desc: 'Modern security architecture.' }
-          ]
-        }
-      ]
-    },
-    'Industries': {
-      subCategories: [
-        {
-          name: 'Healthcare',
-          links: [
-            { title: 'Clinic IT', desc: 'Specialized support for medical software.' },
-            { title: 'HIPAA/PIPEDA', desc: 'Strict patient data compliance.' }
-          ]
-        },
-        {
-          name: 'Real Estate',
-          links: [
-            { title: 'Property Tech', desc: 'Automation for management firms.' },
-            { title: 'Mobile Office', desc: 'Secure access for agents in the field.' }
-          ]
-        }
-      ]
+      const firstSub = megaMenuContent[menu]?.subCategories[0]?.name || null;
+      setActiveSubCategory(firstSub);
     }
   };
 
   return (
-    <header className="relative bg-white border-b border-gray-200 font-sans z-50">
+    <header ref={navRef} className="relative bg-white border-b border-gray-200 font-sans z-[100]">
       <nav className="max-w-[1400px] mx-auto px-6 h-16 flex justify-between items-center">
-
-        <div className="flex items-center space-x-8">
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/gsons-logo.png"
-              alt="GSons IT Solutions"
-              className="h-16 w-auto bg-transparent object-contain sm:h-18"
-            />
+        <div className="flex items-center space-x-6">
+          <Link href="/" className="flex-shrink-0" onClick={() => setActiveMenu(null)}>
+            <img src="/gsons-logo.png" alt="GSons IT Solutions" className="h-14 w-auto object-contain" />
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 text-[15px] font-medium text-gray-700 mt-2">
+          <div className="hidden lg:flex items-center space-x-4 text-[13px] font-medium text-gray-700">
             {Object.keys(megaMenuContent).map((item) => (
               <button
                 key={item}
                 onClick={() => toggleMenu(item)}
-                className={`hover:text-black pb-1 border-b-2 transition-colors ${
+                className={`hover:text-black pb-1 border-b-2 transition-colors whitespace-nowrap ${
                   activeMenu === item ? 'border-black text-black' : 'border-transparent'
                 }`}
               >
@@ -115,54 +131,88 @@ export default function Nav() {
           </div>
         </div>
 
-        {/* Desktop Right Links */}
-        <div className="hidden lg:flex items-center space-x-8 text-[15px] font-medium text-gray-700">
-          <Link href="/shop" className="hover:text-black">Shop</Link>
-          <Link href="/drivers" className="hover:text-black">Drivers</Link>
-          <Link href="/about" className="hover:text-black">Support</Link>
-          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ring-offset-background bg-primary text-primary-foreground shadow-glow hover:bg-primary/90 h-12 px-8 text-base">
-            Book Consultation
+        <div className="hidden lg:flex items-center space-x-6 text-[13px] font-medium text-gray-700">
+          <Link href="/resources" className="hover:text-black">Resources</Link>
+          <Link href="/remote-support" className="hover:text-black">Remote Support</Link>
+          <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
+            Book Consultation &gt;
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
-        <div className="lg:hidden flex items-center">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-gray-700 p-2 focus:outline-none"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 text-gray-700">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </nav>
 
-      {/* Mobile Menu Dropdown */}
+      <div className="hidden lg:block">
+        {activeMenu && (
+          <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-300 shadow-2xl z-[100]">
+            <div className="max-w-[1400px] mx-auto flex min-h-[500px]">
+              <div className="w-80 bg-gray-50/50 border-r border-gray-100 py-6 overflow-y-auto max-h-[70vh]">
+                <ul className="space-y-1">
+                  {megaMenuContent[activeMenu].subCategories.map((sub) => (
+                    <li
+                      key={sub.name}
+                      onMouseEnter={() => setActiveSubCategory(sub.name)}
+                      className={`px-6 py-3 cursor-pointer text-[13px] font-bold transition-all border-l-4 ${
+                        activeSubCategory === sub.name
+                          ? 'bg-white border-black text-gray-900'
+                          : 'border-transparent text-gray-500 hover:text-black'
+                      }`}
+                    >
+                      {sub.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1 p-10 bg-white overflow-y-auto max-h-[70vh]">
+                <h2 className="text-xl font-bold text-gray-900 mb-8 border-b pb-4 uppercase tracking-tight">{activeSubCategory}</h2>
+                <div className="grid grid-cols-3 gap-x-8 gap-y-10">
+                  {megaMenuContent[activeMenu].subCategories
+                    .find(sub => sub.name === activeSubCategory)
+                    ?.links.map((link, idx) => (
+                      <div key={idx} className="group">
+                        <Link href="#" onClick={() => setActiveMenu(null)}>
+                          <h3 className="font-bold text-[15px] mb-1 group-hover:text-blue-600 transition-colors">
+                            {link.title} <span className="ml-1 text-gray-400 group-hover:translate-x-1 inline-block transition-transform">›</span>
+                          </h3>
+                          <p className="text-gray-500 text-xs leading-relaxed">{link.desc}</p>
+                        </Link>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto max-h-[calc(100vh-64px)]">
-          <div className="p-4 space-y-4">
+        <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-t shadow-xl overflow-y-auto max-h-[calc(100vh-64px)] z-[110]">
+          <div className="p-4 space-y-2">
             {Object.keys(megaMenuContent).map((item) => (
-              <div key={item} className="border-b border-gray-100 pb-2">
+              <div key={item} className="border-b last:border-0 pb-2">
                 <button
                   onClick={() => toggleMenu(item)}
-                  className="w-full text-left font-bold text-gray-900 py-2 flex justify-between"
+                  className="w-full flex justify-between items-center py-3 font-bold text-gray-900"
                 >
                   {item} <span>{activeMenu === item ? '−' : '+'}</span>
                 </button>
                 {activeMenu === item && (
-                  <div className="pl-4 space-y-4 pt-2">
+                  <div className="pl-4 space-y-6 pt-2 pb-4">
                     {megaMenuContent[item].subCategories.map((sub) => (
                       <div key={sub.name}>
-                        <p className="text-black font-bold text-xs uppercase mb-2">{sub.name}</p>
-                        <ul className="space-y-2">
+                        <p className="text-[10px] uppercase font-black text-gray-400 mb-3 tracking-widest">{sub.name}</p>
+                        <ul className="space-y-4">
                           {sub.links.map((link, idx) => (
                             <li key={idx}>
-                              <Link href="#" className="block group">
+                              <Link href="#" className="block" onClick={() => setIsMobileMenuOpen(false)}>
                                 <p className="font-bold text-sm text-gray-800">{link.title}</p>
                                 <p className="text-xs text-gray-500">{link.desc}</p>
                               </Link>
@@ -175,58 +225,14 @@ export default function Nav() {
                 )}
               </div>
             ))}
-            <div className="pt-4 space-y-4">
-              <Link href="/shop" className="block font-medium text-gray-700">Shop</Link>
-              <Link href="/drivers" className="block font-medium text-gray-700">Drivers</Link>
-              <Link href="/about" className="block font-medium text-gray-700">Support</Link>
-              <button className="w-full bg-black text-white py-3 rounded-sm font-bold">BOOK A CALL</button>
+            <div className="pt-4 flex flex-col space-y-4">
+               <Link href="/resources" className="font-bold text-gray-700 px-1">Resources</Link>
+               <Link href="/remote-support" className="font-bold text-gray-700 px-1">Remote Support</Link>
+               <button className="w-full bg-black text-white py-4 rounded-md font-bold tracking-tight">BOOK CONSULTATION</button>
             </div>
           </div>
         </div>
       )}
-
-      {/* Desktop Mega Menu Panel */}
-      <div className="hidden lg:block">
-        {activeMenu && (
-          <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-300 z-50 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
-            <div className="max-w-[1400px] mx-auto flex min-h-[400px]">
-              <div className="w-64 bg-white border-r border-gray-100 py-6">
-                <ul className="space-y-1">
-                  {megaMenuContent[activeMenu].subCategories.map((sub) => (
-                    <li
-                      key={sub.name}
-                      onClick={() => setActiveSubCategory(sub.name)}
-                      className={`px-6 py-3 cursor-pointer text-sm font-bold transition-all border-l-4 ${
-                        activeSubCategory === sub.name
-                        ? 'bg-gray-50 border-black text-gray-900' 
-                        : 'border-transparent text-gray-500 hover:text-black'
-                      }`}
-                    >
-                      {sub.name}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex-1 p-10 bg-white">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">{activeSubCategory}</h2>
-                <div className="grid grid-cols-3 gap-10">
-                  {megaMenuContent[activeMenu].subCategories
-                    .find(sub => sub.name === activeSubCategory)
-                    ?.links.map((link, idx) => (
-                      <div key={idx} className="group cursor-pointer">
-                        <h3 className="font-bold text-[17px] mb-2 flex items-center group-hover:text-black transition-colors">
-                          {link.title} 
-                          <span className="ml-2 text-black group-hover:translate-x-1 transition-transform">›</span>
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed">{link.desc}</p>
-                      </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
     </header>
   );
 }
