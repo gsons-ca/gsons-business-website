@@ -10,7 +10,7 @@ export default function IntegrationStack() {
         <SectionHeader
           eyebrow="Integrations"
           title="Connect the tools you already run"
-          description="RiverERP connects to your stack with secure connectors and tailored workflows."
+          description="Managed IT integrates with your existing monitoring, ITSM, and cloud tools for a single operations view."
         />
         <Reveal>
           <div className="flex flex-wrap gap-3 rounded-3xl border border-border bg-card/70 p-6 shadow-soft">

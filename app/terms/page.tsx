@@ -12,8 +12,8 @@ export default function TermsPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Terms & conditions"
-              title="Terms for using RiverERP"
-              description="These terms outline how RiverERP services are delivered and supported."
+              title="Terms for using managed IT services"
+              description="These terms outline how managed IT services are delivered and supported."
             />
             <Card className="space-y-6 border-border/70 p-6 text-sm text-muted-foreground">
               <div className="space-y-2">

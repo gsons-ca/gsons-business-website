@@ -9,8 +9,8 @@ export default function CaseStudies() {
       <div className="container space-y-10">
         <SectionHeader
           eyebrow="Outcomes"
-          title="Migration wins you can show the board"
-          description="Real results from teams that moved to RiverERP."
+          title="Operations wins you can show the board"
+          description="Real results from teams that moved to managed IT operations."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {caseStudies.map((study, index) => (

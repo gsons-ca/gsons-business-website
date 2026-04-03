@@ -12,8 +12,8 @@ export default function PrivacyPolicyPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Privacy policy"
-              title="How RiverERP handles your data"
-              description="We collect only what we need to deliver implementation, support, and product updates."
+              title="How managed IT services handle your data"
+              description="We collect only what we need to deliver onboarding, support, and operational updates."
             />
             <Card className="space-y-6 border-border/70 p-6 text-sm text-muted-foreground">
               <div className="space-y-2">

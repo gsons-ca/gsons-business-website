@@ -22,7 +22,7 @@ export default function BookConsultationPage() {
             >
               <div
                 className="calendly-inline-widget"
-                data-url="https://calendly.com/rivererp/30min"
+                data-url="https://calendly.com/managedit/30min"
                 style={{ minWidth: '320px', height: '800px' }}
               />
             </div>

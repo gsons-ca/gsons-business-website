@@ -17,8 +17,8 @@ export default function Nav() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/rivererp-logo.png"
-            alt="RiverERP"
+            src="/gsons-logo.png"
+            alt="Managed IT services"
             className="h-16 w-auto bg-transparent object-contain sm:h-18"
           />
         </Link>

@@ -26,20 +26,20 @@ interface HeroProps {
 }
 
 const heroHighlights = [
-  { label: 'Onboarding & training', icon: GraduationCap },
-  { label: 'Customised modules', icon: Puzzle },
-  { label: 'Dedicated support', icon: Headset },
-  { label: 'Affordable & predictable pricing', icon: BadgeDollarSign },
-  { label: 'Multiple industries', icon: Globe }
+  { label: '24/7 NOC and security', icon: Headset },
+  { label: 'Automated patching', icon: Puzzle },
+  { label: 'Clear SLAs', icon: BadgeDollarSign },
+  { label: 'Hybrid cloud support', icon: Globe },
+  { label: 'Tiered helpdesk', icon: GraduationCap }
 ];
 
 const launchCard = {
-  eyebrow: 'RiverERP launch snapshot',
-  title: 'Product readiness',
-  badge: 'Launch-ready',
+  eyebrow: 'Managed IT launch snapshot',
+  title: 'Service readiness',
+  badge: 'Live',
   stats: [
-    { label: 'Implementation window', value: '6-8 weeks' },
-    { label: 'Implementation coverage', value: '30+ setups' },
+    { label: 'Onboarding duration', value: '2-3 weeks' },
+    { label: 'Systems monitored', value: '100% coverage' },
     { label: 'Support coverage', value: '24/7' }
   ]
 };

@@ -18,101 +18,101 @@ export const logos = [
 ];
 
 export const hero = {
-  title: 'A premium ERP rollout with zero drama and full control.',
+  title: 'Managed IT services built for reliability and growth.',
   copy:
-    'RiverERP moves you from legacy ERP to a modern operating system with a measured plan, sandbox validation, and hands-on enablement. You see every risk, every checkpoint, and the exact numbers before cutover.',
-  tagline: 'Ship a modern ERP without the enterprise drag.',
-  ctaLabel: 'Request a demo'
+    'We deliver 24/7 IT infrastructure management, security operations, and helpdesk support with transparent SLAs and proactive improvement cycles.',
+  tagline: 'Stop firefighting. Start predictable IT operations.',
+  ctaLabel: 'Get a custom plan'
 };
 
 export const stats = [
-  { value: '6-8 weeks', label: 'Average go-live after sign-off' },
-  { value: '30+ modules', label: 'Configured for finance, ops, and compliance' },
-  { value: '99.95%', label: 'Reconciliation accuracy target' },
-  { value: '24/7', label: 'Go-live monitoring with named leads' }
+  { value: '99.99%', label: 'Targeted uptime with SRE-grade monitoring' },
+  { value: '15 mins', label: 'Average priority incident response' },
+  { value: '100%', label: 'Endpoint patch compliance or remediation' },
+  { value: '24/7', label: 'Monitoring, NOC, and security operations' }
 ];
 
 export const featureHighlights = [
   {
-    title: 'Customised modules',
-    description: 'Configure finance, procurement, inventory, and reporting around the way your teams already work.',
-    tag: 'Fit'
+    title: 'Proactive infrastructure ops',
+    description: 'Cloud and on-prem systems monitored, patched, and scaled automatically before issues affect users.',
+    tag: 'Reliability'
   },
   {
-    title: 'Built for medium to enterprise-level businesses',
-    description: 'Multi-entity, multi-location operations with approvals and visibility without enterprise bloat.',
-    tag: 'Scale'
+    title: 'Security-first posture',
+    description: 'Firewall, endpoint detection, identity management, and threat response in a single managed stack.',
+    tag: 'Security'
   },
   {
-    title: 'Compliance-ready governance',
-    description: 'Audit trails, role-based approvals, and reporting built for regulatory and industry needs.',
-    tag: 'Compliance'
+    title: 'Service desk with SLAs',
+    description: 'Helpdesk, incident triage, and problem management with clear priority, status, and real-time updates.',
+    tag: 'Support'
   },
   {
-    title: 'Single source of truth',
-    description: 'Unify finance, ops, and leadership data so teams stop reconciling in spreadsheets.',
-    tag: 'Clarity'
+    title: 'Cost and cloud optimization',
+    description: 'Regular platform tuning and continued architecture reviews to reduce waste and improve performance.',
+    tag: 'Efficiency'
   }
 ];
 
 export const platformTabs = [
   {
-    id: 'implementation',
-    label: 'Implementation',
-    title: 'Implementation mapped before any data moves.',
-    description: 'Define scope, owners, and acceptance criteria so every team knows what goes live and when.',
+    id: 'onboarding',
+    label: 'Onboarding',
+    title: 'Fast onboarding with full environment audits.',
+    description: 'Discovery, risk assessment, and road map with security baseline in place day one.',
     bullets: [
-      'Discovery workshops and process mapping by department.',
-      'Custom module configuration with approvals and roles.',
-      'Implementation plan with week-by-week milestones.'
+      'Infrastructure and security posture audit.',
+      'Custom operations playbook and runbook creation.',
+      'Quarterly roadmap with cost and performance targets.'
     ],
     panel: {
-      eyebrow: 'Implementation cockpit',
-      title: 'Build readiness',
+      eyebrow: 'Onboarding portal',
+      title: 'Launch readiness',
       items: [
-        { label: 'Process mapping', value: 'Complete', progress: 100 },
-        { label: 'Module configuration', value: '68%', progress: 68 },
-        { label: 'Stakeholder sign-off', value: 'In review', detail: 'Finance · Ops · IT' }
+        { label: 'Audit complete', value: '100%', progress: 100 },
+        { label: 'Identity and access controls', value: 'Configured', progress: 100 },
+        { label: 'Alerting thresholds', value: 'Set', detail: 'Network · Systems · Applications' }
       ]
     }
   },
   {
-    id: 'migration',
-    label: 'Migration',
-    title: 'Migration rehearsed with your real data.',
-    description: 'Validate masters and transactions in waves with reconciliation before cutover.',
+    id: 'management',
+    label: 'Management',
+    title: '24/7 operations and security monitoring.',
+    description: 'Live visibility, proactive patching, and incident response in one managed service.',
     bullets: [
-      'Data cleansing and mapping with test loads.',
-      'Parallel run until totals match and reports align.',
-      'Cutover checklist with rollback options.'
+      'Event-driven monitoring and automated remediation.',
+      'Patch and vulnerability management across endpoints.',
+      'Support desk with workflow and SLA tracking.'
     ],
     panel: {
-      eyebrow: 'Migration control',
-      title: 'Cutover readiness',
+      eyebrow: 'Operations command',
+      title: 'Service delivery',
       items: [
-        { label: 'Data loads', value: '82%', progress: 82 },
-        { label: 'Reconciliation', value: '12 exceptions', detail: 'AP · Inventory · Projects' },
-        { label: 'Cutover window', value: 'Confirmed', detail: 'Weekend launch scheduled' }
+        { label: 'Incident response', value: '15 mins', detail: 'P1 average' },
+        { label: 'Patch compliance', value: '100%', detail: 'Windows/macOS/Linux' },
+        { label: 'Change approvals', value: 'Enabled', detail: 'Change advisory board' }
       ]
     }
   },
   {
-    id: 'operations',
-    label: 'Operations',
-    title: 'Operations that stay stable after go-live.',
-    description: 'Dedicated team, monitoring, and optimization after launch.',
+    id: 'optimization',
+    label: 'Optimization',
+    title: 'Continuous improvement through reviews and automation.',
+    description: 'Monthly scorecards, cost optimization, and next-level automation adoption.',
     bullets: [
-      'Hypercare coverage with named leads.',
-      'SLA-based support and ticket triage.',
-      'Quarterly optimization for automation and reporting.'
+      'Weekly service reviews and remediation tickets.',
+      'Cloud cost and performance tuning.',
+      'Automation for routine ops and ticket closure.'
     ],
     panel: {
-      eyebrow: 'Operations desk',
-      title: 'Post-launch stability',
+      eyebrow: 'Optimization desk',
+      title: 'Mature operations',
       items: [
-        { label: 'Hypercare coverage', value: '24/7', detail: 'Named leads on rotation' },
-        { label: 'Ticket SLAs', value: '2 hrs', detail: 'Priority 1 response' },
-        { label: 'Automation wins', value: '8 queued', detail: 'Approvals · Alerts · Reports' }
+        { label: 'Service reviews', value: 'Monthly', detail: 'Action plans issued' },
+        { label: 'Cost savings', value: '15%', detail: 'Average first year' },
+        { label: 'Automation tasks', value: '23 active', detail: 'Quarterly growth' }
       ]
     }
   }
@@ -120,24 +120,24 @@ export const platformTabs = [
 
 export const timeline = [
   {
-    title: 'Discovery and process mapping',
-    detail: 'Capture current workflows, bottlenecks, and success metrics across teams.'
+    title: 'Environment discovery and risk assessment',
+    detail: 'Inventory assets, identify gaps, and set SLAs with stakeholders.'
   },
   {
-    title: 'Solution design and module configuration',
-    detail: 'Configure custom modules, approvals, and roles to match how you operate.'
+    title: 'Plan and secure infrastructure',
+    detail: 'Design resilient architecture, identity access controls, and backup strategy.'
   },
   {
-    title: 'Data cleanup and migration testing',
-    detail: 'Clean master data, run test loads, and reconcile reports before cutover.'
+    title: 'Deployment and monitoring setup',
+    detail: 'Install agents, configure alerts and runbooks, and verify proactive coverage.'
   },
   {
-    title: 'Training and user acceptance',
-    detail: 'Onboarding and training with sign-off from finance, ops, and leadership.'
+    title: 'Training and process enablement',
+    detail: 'Align internal teams to incident playbooks and service desk operations.'
   },
   {
-    title: 'Go-live and hypercare',
-    detail: 'Cutover, monitoring, and dedicated support to stabilise operations.'
+    title: 'Ongoing managed operations',
+    detail: 'Continuous monitoring, incident response, and monthly business reviews.'
   }
 ];
 
@@ -152,19 +152,19 @@ export const industryHighlights = [
 
 export const caseStudies = [
   {
-    title: 'Multi-entity rollout',
-    summary: 'Unified finance and inventory across 12 locations with zero downtime.',
-    metric: '42% faster month-end close'
+    title: 'Cloud migration and operations',
+    summary: 'Shifted workloads to a secure cloud stack and cut incident volume in half.',
+    metric: '50% fewer P1 incidents'
   },
   {
-    title: 'Education platform',
-    summary: 'Migrated admissions and fee systems with structured approvals.',
-    metric: '98% reduction in manual reconciliation'
+    title: 'Security operations uplift',
+    summary: 'Added managed detection and response to a distributed engineering firm.',
+    metric: '100% patch compliance'
   },
   {
-    title: 'Commerce and ops',
-    summary: 'Connected storefront, warehouse, and finance with real-time insights.',
-    metric: '3x faster fulfillment reporting'
+    title: 'Service desk standardization',
+    summary: 'Combined support channels and reduced resolution time across 3 offices.',
+    metric: '60% faster ticket closure'
   }
 ];
 
@@ -177,57 +177,57 @@ export const integrationStacks = [
 ];
 
 export const faqs = [
-  { q: 'Is this a demo or production?', a: 'Both. Start in demo, promote to production with the same implementation plan after sign-off.' },
-  { q: 'Do you support custom apps and integrations?', a: 'Yes. RiverERP Core plus plugins; we add custom apps, fields, scripts, and integrations.' },
-  { q: 'How long to go live?', a: 'Typical go-live is 6-8 weeks after sign-off, including migration and enablement.' },
-  { q: 'What accounts are used?', a: 'Setup uses info.somydigital@gmail.com; demos use rivererp@gmail.com; booking via Calendly only.' },
-  { q: 'Do you offer onboarding and training?', a: 'Yes. We deliver role-based onboarding, team training, and administrator handoffs.' },
-  { q: 'Can you migrate from our current ERP?', a: 'Yes. We handle data mapping, cleansing, test migrations, and parallel runs.' },
-  { q: 'What size businesses do you support?', a: 'We support medium to enterprise-level businesses with multi-entity needs.' },
-  { q: 'Is support included after go-live?', a: 'Yes. Hypercare, SLA-based support, and optimisation are included post-launch.' }
+  { q: 'What does managed IT include?', a: '24/7 monitoring, patching, helpdesk, incident response, security operations, and cloud cost management.' },
+  { q: 'Do you support hybrid and cloud environments?', a: 'Yes. We manage on-prem, public cloud, and hybrid stacks with tailored operational runbooks.' },
+  { q: 'How fast is incident response?', a: 'Priority incidents are handled within 15 minutes and regular tickets within one business hour.' },
+  { q: 'What is required to start?', a: 'We need environment access, asset inventory, and priority services; onboarding often completes in 2-3 weeks.' },
+  { q: 'Do you provide security services?', a: 'Yes. Included are endpoint protection, vulnerability scans, SIEM monitoring, and incident investigations.' },
+  { q: 'Can you work with our current tools?', a: 'Yes. We integrate with existing ITSM, cloud, and security tooling to avoid duplicate platforms.' },
+  { q: 'What size businesses do you support?', a: 'We support SMBs and enterprises with multi-site or distributed teams. Flexible managed services scale with growth.' },
+  { q: 'Is support included after onboarding?', a: 'Yes. Ongoing managed operations, continuous improvement, and monthly business reviews are standard.' }
 ];
 
 export const aboutHero = {
-  tag: 'About RiverERP',
-  title: 'Why teams switch to RiverERP',
+  tag: 'About Managed IT',
+  title: 'Why teams choose our IT operations service',
   copy:
-    'You already have an ERP. You need clarity, not hype. We design a migration you can see, test with your data, and approve only when it works for finance, ops, and your frontline teams.',
-  ctaLabel: 'Request a demo'
+    'You deserve IT that runs quietly and securely. We standardize your environment, remove risk, and continuously improve both performance and cost.',
+  ctaLabel: 'Get started'
 };
 export const aboutCopy =
-  'We focus on the pains you feel: high costs, slow changes, weak support, and data you cannot trust. We fix those first, then migrate with controls, parallel runs, and clear ownership after go-live.';
+  'We fix what keeps your teams up: outages, insecure access, slow support, and uncertain cost. Then we lock in repeatable operations, response SLAs, and measurable improvement.';
 export const aboutFeatures = [
   {
-    title: 'Document what broke before',
-    description: 'Costs, slow changes, bad support, and data quality issues captured so we do not repeat them. You see the list and the mitigation for each.'
+    title: 'Capture operational risk',
+    description: 'We document outages, shadow-IT, compliance gaps, and support bottlenecks so remediation is precise.'
   },
   {
-    title: 'Prove critical work in a sandbox',
-    description: 'Your approval flows, invoices, inventory moves, and reports tested with your sample data before we proceed.'
+    title: 'Standardize playbooks',
+    description: 'Incident response, change control, and onboarding processes are codified and validated before rollout.'
   },
   {
-    title: 'Map roles and controls',
-    description: 'Access, approvals, and audit trails set to match how finance, ops, and owners need to govern, including industry-specific compliance needs.'
+    title: 'Control access and security',
+    description: 'Identity management, MFA, and role-based access controls are configured to align with your compliance needs.'
   },
   {
-    title: 'Migrate with checkpoints',
-    description: 'Masters and transactions moved in batches with validation, reconciliation, and rollback options.'
+    title: 'Implement with checkpoints',
+    description: 'Infrastructure, monitoring, and backup changes are rolled out in stages with rollback paths and test validation.'
   },
   {
-    title: 'Run both systems briefly',
-    description: 'Parallel run with your current ERP until balances, reports, and day-to-day tasks agree, so teams are never blind.'
+    title: 'Run parallel during transition',
+    description: 'New managed operations run alongside legacy support while we verify stability and performance.'
   },
   {
-    title: 'Cut over with support on-call',
-    description: 'Planned go-live window, named contacts, and post-go-live fixes owned by the same team.'
+    title: 'Handover with clear ownership',
+    description: 'Support contacts, SLAs, and service reports are shared with your team before we take full operations responsibility.'
   }
 ];
 
 export const industriesHero = {
   tag: 'Industries',
-  title: 'Configured for the industries we know well.',
-  copy: 'Preview RiverERP in a sandbox with your data and flows for your specific industry before any migration decision.',
-  ctaLabel: 'Request a demo'
+  title: 'Managed IT services for your sector',
+  copy: 'We align security, infrastructure, and support with industry-specific demands before we take over operations.',
+  ctaLabel: 'Get a consult'
 };
 export const industriesList = [
   'Manufacturing',
@@ -238,7 +238,7 @@ export const industriesList = [
   'IT Services'
 ];
 export const industriesCopy =
-  'Industry implementation plans for approvals, billing, inventory, and reporting trialed in a sandbox with your sample data, adjusted together, then promoted only when numbers align.';
+  'Sector-tailored runbooks, compliance checks, and support SLAs designed to fit your workflows and risk profile.';
 
 export const casesHero = {
   tag: 'Case studies',
@@ -248,14 +248,14 @@ export const casesHero = {
 };
 export const cases = [
   { title: 'Multi-entity rollout', detail: 'Sandbox to production with shared plugins and governance.' },
-  { title: 'Education stack', detail: 'Admissions, fees, attendance, and parent portals with RiverERP.' },
+  { title: 'Education stack', detail: 'Admissions, fees, attendance, and parent portals under managed IT assurance.' },
   { title: 'Commerce and ops', detail: 'Ecommerce storefront to fulfillment with inventory controls.' }
 ];
-export const casesCopy = 'See where migrations went smoothly, where they did not, and how we corrected course.';
+export const casesCopy = 'See where operations went smooth, where they needed reinforcement, and how we corrected course.';
 
 export const testimonials = [
   {
-    quote: 'RiverERP handled setup, plugins, and training. Our teams used it day one.',
+    quote: 'Managed IT handled setup, onboarding, and training. Our users were supported day one.',
     name: 'Alex Morgan',
     title: 'COO',
     company: 'Global Grocers',
@@ -280,9 +280,9 @@ export const testimonialsCopy = 'Straightforward notes from teams about what imp
 
 export const testimonialsHero = {
   tag: 'Testimonials',
-  title: 'Proof from teams that shipped faster.',
-  copy: 'Hear what worked and what was hard for teams that switched to RiverERP.',
-  ctaLabel: 'Request a demo'
+  title: 'Proof from teams that operate more reliably.',
+  copy: 'Hear what worked and what was hard for teams that moved to managed IT operations.',
+  ctaLabel: 'Get in touch'
 };
 export const testimonialsPage = testimonials;
 
@@ -290,7 +290,7 @@ export const footerColumns = [
   {
     heading: 'Product',
     links: [
-      { label: 'RiverERP platform', href: '/#platform' },
+      { label: 'Managed IT platform', href: '/#platform' },
       { label: 'Approach', href: '/#approach' },
       { label: 'Process', href: '/#process' },
       { label: 'Book Consultation', href: '/book-consultation' }
@@ -315,4 +315,4 @@ export const footerColumns = [
   }
 ];
 
-export const footerNote = 'ERP implementations with clear milestones, clean data, and confident go-live support.';
+export const footerNote = 'Managed IT services with measurable SLAs, proactive operations, and expert support continuity.';

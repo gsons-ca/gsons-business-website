@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_2fr]">
           <div>
             <img
-              src="/rivererp-logo.png"
-              alt="RiverERP"
+              src="/gsons-logo.png"
+              alt="Managed IT services"
               className="h-16 w-auto bg-transparent object-contain sm:h-18"
             />
             <p className="mt-4 text-sm text-muted-foreground">{footerNote}</p>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-border/70 pt-6 text-center text-xs text-muted-foreground">
-          <span>Copyright {currentYear} RiverERP. All rights reserved.</span>
+          <span>Copyright {currentYear} Managed IT Services. All rights reserved.</span>
         </div>
       </div>
     </footer>

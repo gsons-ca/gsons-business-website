@@ -18,9 +18,9 @@ const plexSansCondensed = IBM_Plex_Sans_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: 'RiverERP | Premium ERP Implementation',
+  title: 'Managed IT Services | Trusted IT Operations',
   description:
-    'RiverERP is a premium ERP platform and implementation studio for modern finance, ops, and leadership teams.'
+    'Premium managed IT services: 24/7 monitoring, security, infrastructure, and helpdesk for scaling enterprises.'
 };
 
 export default function RootLayout({

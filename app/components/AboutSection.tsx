@@ -33,9 +33,9 @@ export default function AboutSection({ title, copy, items, reasons }: AboutSecti
             ))}
           </div>
           <Card className="border-border/70 p-6">
-            <h3 className="text-lg font-semibold">Why teams consider switching to RiverERP</h3>
+            <h3 className="text-lg font-semibold">Why teams choose managed IT</h3>
             <p className="mt-3 text-sm text-muted-foreground">
-              Themes we hear from finance, ops, and IT leaders who want a calmer ERP experience.
+              Themes we hear from leaders who want consistent uptime, security, and predictable service.
             </p>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
               {reasons.map(reason => (

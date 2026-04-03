@@ -10,8 +10,8 @@ export default function Powered({ items }: PoweredProps) {
     <section className="py-16" id="about">
       <div className="container space-y-10">
         <SectionHeader
-          title="Powered by RiverERP"
-          description="Stable foundation with RiverERP implementation speed and proven implementations."
+          title="Powered by managed IT operations"
+          description="Stable foundation with proactive monitoring, security, and support built in."
         />
         <div className="flex flex-wrap gap-3 rounded-3xl border border-border bg-card/70 p-6 shadow-soft">
           {items.map(item => (

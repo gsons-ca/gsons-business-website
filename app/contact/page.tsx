@@ -15,16 +15,16 @@ export default function ContactPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Contact"
-              title="Talk to the RiverERP team"
-              description="Reach out for implementation questions, demos, or support planning."
+              title="Talk to the managed IT team"
+              description="Reach out for service onboarding, security planning, or support operations questions."
             />
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
               <Card className="space-y-4 border-border/70 p-6 text-sm text-muted-foreground">
                 <div>
                   <h2 className="text-base font-semibold text-foreground">Email</h2>
                   <p className="mt-2">
-                    <Link href="mailto:rivererp@gmail.com" className="text-foreground underline underline-offset-4">
-                      rivererp@gmail.com
+                    <Link href="mailto:info@managedit.example" className="text-foreground underline underline-offset-4">
+                      info@managedit.example
                     </Link>
                   </p>
                 </div>
