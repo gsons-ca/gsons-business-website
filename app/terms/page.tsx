@@ -12,8 +12,8 @@ export default function TermsPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Terms & conditions"
-              title="Terms for using managed IT services"
-              description="These terms outline how managed IT services are delivered and supported."
+              title="Terms for using GSons IT Solutions services"
+              description="These terms outline how GSons IT Solutions managed IT services are delivered and supported."
             />
             <Card className="space-y-6 border-border/70 p-6 text-sm text-muted-foreground">
               <div className="space-y-2">
@@ -25,8 +25,8 @@ export default function TermsPage() {
               <div className="space-y-2">
                 <h2 className="text-base font-semibold text-foreground">Services</h2>
                 <p>
-                  Services include implementation planning, configuration, migration support, training, and
-                  post-launch assistance as agreed in your engagement scope.
+                  Services include onboarding, infrastructure management, security operations, helpdesk support, and
+                  continuous optimization as agreed in your service scope.
                 </p>
               </div>
               <div className="space-y-2">

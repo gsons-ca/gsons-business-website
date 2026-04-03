@@ -13,8 +13,8 @@ export default function BookConsultationPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Book time"
-              title="Schedule a migration review"
-              description="Pick a time that works for you. We will walk through your ERP risks and map the next steps."
+              title="Schedule an IT consultation"
+              description="Pick a time that works for you. We will walk through your IT risks and map the next steps."
             />
             <div
               id="calendly-inline"
@@ -22,7 +22,7 @@ export default function BookConsultationPage() {
             >
               <div
                 className="calendly-inline-widget"
-                data-url="https://calendly.com/managedit/30min"
+                data-url="https://calendly.com/gsonsitsolutions/30min"
                 style={{ minWidth: '320px', height: '800px' }}
               />
             </div>

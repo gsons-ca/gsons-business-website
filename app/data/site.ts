@@ -1,5 +1,5 @@
 export const calendlyUrl = '/book-consultation';
-export const navPhone = '+1 (555) 123-4567';
+export const navPhone = '+1 (403) 555-0123';
 
 export const navLinks = [
   { label: 'Platform', href: '/#platform' },
@@ -10,17 +10,17 @@ export const navLinks = [
 ];
 
 export const logos = [
-  { name: 'Global Grocers', href: 'https://example.com/global-grocers', city: 'Penticton', country: 'Canada', industry: 'Retail' },
-  { name: 'Shuaiba Industrial', href: 'https://example.com/shuaiba-industrial', city: 'Dubai', country: 'UAE', industry: 'Manufacturing' },
-  { name: 'Memor Perfumes', href: 'https://example.com/memor-perfumes', city: 'Bengaluru', country: 'India', industry: 'Retail' },
-  { name: 'CNC', href: 'https://example.com/cnc', city: 'Prince George', country: 'Canada', industry: 'Manufacturing' },
-  { name: 'Somy Digital', href: 'https://example.com/somy-digital', city: 'Vancouver', country: 'Canada', industry: 'IT Services' }
+  { name: 'Calgary Petroleum', href: 'https://example.com/calgary-petroleum', city: 'Calgary', country: 'Canada', industry: 'Energy' },
+  { name: 'Prairie Manufacturing', href: 'https://example.com/prairie-manufacturing', city: 'Calgary', country: 'Canada', industry: 'Manufacturing' },
+  { name: 'Rocky Mountain Retail', href: 'https://example.com/rocky-mountain-retail', city: 'Calgary', country: 'Canada', industry: 'Retail' },
+  { name: 'Foothills Construction', href: 'https://example.com/foothills-construction', city: 'Calgary', country: 'Canada', industry: 'Construction' },
+  { name: 'Calgary Tech Solutions', href: 'https://example.com/calgary-tech-solutions', city: 'Calgary', country: 'Canada', industry: 'IT Services' }
 ];
 
 export const hero = {
   title: 'Managed IT services built for reliability and growth.',
   copy:
-    'We deliver 24/7 IT infrastructure management, security operations, and helpdesk support with transparent SLAs and proactive improvement cycles.',
+    'GSons IT Solutions delivers 24/7 IT infrastructure management, security operations, and helpdesk support with transparent SLAs and proactive improvement cycles.',
   tagline: 'Stop firefighting. Start predictable IT operations.',
   ctaLabel: 'Get a custom plan'
 };
@@ -188,7 +188,7 @@ export const faqs = [
 ];
 
 export const aboutHero = {
-  tag: 'About Managed IT',
+  tag: 'About GSons IT Solutions',
   title: 'Why teams choose our IT operations service',
   copy:
     'You deserve IT that runs quietly and securely. We standardize your environment, remove risk, and continuously improve both performance and cost.',
@@ -225,58 +225,58 @@ export const aboutFeatures = [
 
 export const industriesHero = {
   tag: 'Industries',
-  title: 'Managed IT services for your sector',
-  copy: 'We align security, infrastructure, and support with industry-specific demands before we take over operations.',
+  title: 'Managed IT services for Calgary industries',
+  copy: 'We align security, infrastructure, and support with industry-specific demands before we take over operations in Calgary.',
   ctaLabel: 'Get a consult'
 };
 export const industriesList = [
+  'Energy & Oil & Gas',
   'Manufacturing',
-  'Wholesale & Trading',
+  'Professional Services',
+  'Healthcare',
   'Retail & Ecommerce',
-  'Engineering & Construction',
-  'Education',
-  'IT Services'
+  'Construction'
 ];
 export const industriesCopy =
-  'Sector-tailored runbooks, compliance checks, and support SLAs designed to fit your workflows and risk profile.';
+  'Sector-tailored runbooks, compliance checks, and support SLAs designed to fit Calgary industries and risk profiles.';
 
 export const casesHero = {
   tag: 'Case studies',
   title: 'Demo to production implementations.',
   copy: 'Walk through similar migrations to see how risk, data, and support were handled.',
-  ctaLabel: 'Request a demo'
+  ctaLabel: 'Get a demo'
 };
 export const cases = [
   { title: 'Multi-entity rollout', detail: 'Sandbox to production with shared plugins and governance.' },
-  { title: 'Education stack', detail: 'Admissions, fees, attendance, and parent portals under managed IT assurance.' },
+  { title: 'Education stack', detail: 'Admissions, fees, attendance, and parent portals with GSons IT Solutions.' },
   { title: 'Commerce and ops', detail: 'Ecommerce storefront to fulfillment with inventory controls.' }
 ];
-export const casesCopy = 'See where operations went smooth, where they needed reinforcement, and how we corrected course.';
+export const casesCopy = 'See where operations went smoothly, where they needed reinforcement, and how we corrected course.';
 
 export const testimonials = [
   {
-    quote: 'Managed IT handled setup, onboarding, and training. Our users were supported day one.',
+    quote: 'GSons IT Solutions handled setup, onboarding, and training. Our users were supported day one.',
     name: 'Alex Morgan',
     title: 'COO',
     company: 'Global Grocers',
     href: 'https://example.com/global-grocers'
   },
   {
-    quote: 'Predictable rollout, no enterprise bloat. Demo to production in weeks.',
+    quote: 'Predictable IT operations, no more firefighting. GSons IT Solutions delivers exactly what businesses need.',
     name: 'Jamie Patel',
     title: 'Operations Director',
     company: 'Shuaiba Industrial Company',
     href: 'https://example.com/shuaiba-industrial'
   },
   {
-    quote: 'Single CTA via Calendly made stakeholder engagement easy.',
+    quote: 'Professional expertise made all the difference. GSons IT Solutions understands business challenges.',
     name: 'Taylor Chen',
     title: 'Program Lead',
     company: 'Memor Perfumes',
     href: 'https://example.com/memor-perfumes'
   }
 ];
-export const testimonialsCopy = 'Straightforward notes from teams about what improved after switching and what took work.';
+export const testimonialsCopy = 'Straightforward feedback from businesses about what improved after switching to managed IT operations.';
 
 export const testimonialsHero = {
   tag: 'Testimonials',

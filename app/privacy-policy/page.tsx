@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Privacy policy"
-              title="How managed IT services handle your data"
+              title="How GSons IT Solutions handles your data"
               description="We collect only what we need to deliver onboarding, support, and operational updates."
             />
             <Card className="space-y-6 border-border/70 p-6 text-sm text-muted-foreground">

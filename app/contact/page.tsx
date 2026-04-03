@@ -15,7 +15,7 @@ export default function ContactPage() {
           <div className="container space-y-8">
             <SectionHeader
               eyebrow="Contact"
-              title="Talk to the managed IT team"
+              title="Talk to the GSons IT Solutions team"
               description="Reach out for service onboarding, security planning, or support operations questions."
             />
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -23,8 +23,8 @@ export default function ContactPage() {
                 <div>
                   <h2 className="text-base font-semibold text-foreground">Email</h2>
                   <p className="mt-2">
-                    <Link href="mailto:info@managedit.example" className="text-foreground underline underline-offset-4">
-                      info@managedit.example
+                    <Link href="mailto:info@gsonsitsolutions.ca" className="text-foreground underline underline-offset-4">
+                      info@gsonsitsolutions.ca
                     </Link>
                   </p>
                 </div>

@@ -18,9 +18,9 @@ const plexSansCondensed = IBM_Plex_Sans_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: 'Managed IT Services | Trusted IT Operations',
+  title: 'GSons IT Solutions | Managed IT Services',
   description:
-    'Premium managed IT services: 24/7 monitoring, security, infrastructure, and helpdesk for scaling enterprises.'
+    'Premium managed IT services: 24/7 monitoring, security, infrastructure, and helpdesk for growing enterprises.'
 };
 
 export default function RootLayout({
