@@ -10,18 +10,18 @@ export const navLinks = [
 ];
 
 export const logos = [
-  { name: 'Calgary Petroleum', href: 'https://example.com/calgary-petroleum', city: 'Calgary', country: 'Canada', industry: 'Energy' },
-  { name: 'Prairie Manufacturing', href: 'https://example.com/prairie-manufacturing', city: 'Calgary', country: 'Canada', industry: 'Manufacturing' },
-  { name: 'Rocky Mountain Retail', href: 'https://example.com/rocky-mountain-retail', city: 'Calgary', country: 'Canada', industry: 'Retail' },
-  { name: 'Foothills Construction', href: 'https://example.com/foothills-construction', city: 'Calgary', country: 'Canada', industry: 'Construction' },
-  { name: 'Calgary Tech Solutions', href: 'https://example.com/calgary-tech-solutions', city: 'Calgary', country: 'Canada', industry: 'IT Services' }
+  { name: 'HiTech Advisors', href: '#', city: 'Seattle', country: 'USA', industry: 'IT Consulting' },
+  { name: 'Net Solutions', href: 'https://www.netsolutions.com/', city: 'Toronto', country: 'Canada', industry: 'Software Development' },
+  { name: 'Territorial Auto', href: 'https://www.territorialauto.ca/', city: 'Whitehorse', country: 'Canada', industry: 'Automotive' },
+  { name: 'Minuteman Press', href: 'https://minuteman.com/', city: 'Calgary', country: 'Canada', industry: 'Printing & Marketing' },
+  { name: 'Global Grocers', href: 'https://www.facebook.com/globalgrocers/', city: 'Penticton', country: 'Canada', industry: 'Retail' }
 ];
 
 export const hero = {
   title: 'Managed IT services built for reliability and growth.',
   copy:
     'GSons IT Solutions delivers 24/7 IT infrastructure management, security operations, and helpdesk support with transparent SLAs and proactive improvement cycles.',
-  tagline: 'Stop firefighting. Start predictable IT operations.',
+  tagline: 'Leading provider of exceptional client-centric IT managed services.',
   ctaLabel: 'Get a custom plan'
 };
 

@@ -134,7 +134,7 @@ export default function Nav() {
           <Link href="/resources" className="hover:text-black">Resources</Link>
           <Link href="/remote-support" className="hover:text-black">Remote Support</Link>
           <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
-            Book Consultation &gt;
+            Book Consultation
           </button>
         </div>
 
