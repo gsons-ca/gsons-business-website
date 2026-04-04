@@ -283,7 +283,7 @@ export default function Nav() {
               <div key={item} className="border-b last:border-0 pb-2">
                 <button
                   onClick={() => toggleMenu(item)}
-                  className="w-full flex justify-between items-center py-3 font-bold text-gray-900"
+                  className="w-full flex justify-between items-center py-1 font-bold text-gray-900"
                 >
                   {item} <span>{activeMenu === item ? '−' : '+'}</span>
                 </button>
@@ -315,12 +315,12 @@ export default function Nav() {
   href="https://calendly.com/info-gsons-ca/30min" 
   target="_blank" 
   rel="noopener noreferrer"
-  className="inline-block"
+  className="block w-full mt-4"
 >
-  <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
+  <button className="w-full h-14 bg-black text-white rounded-full font-bold text-base shadow-lg active:scale-95 transition-all uppercase tracking-wide">
     Book Consultation
   </button>
-</a>        </div>
+</a>       </div>
           </div>
         </div>
       )}
