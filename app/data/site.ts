@@ -10,11 +10,11 @@ export const navLinks = [
 ];
 
 export const logos = [
-  { name: 'HiTech Advisors', href: '#', city: 'Seattle', country: 'USA', industry: 'IT Consulting' },
-  { name: 'Net Solutions', href: 'https://www.netsolutions.com/', city: 'Toronto', country: 'Canada', industry: 'Software Development' },
-  { name: 'Territorial Auto', href: 'https://www.territorialauto.ca/', city: 'Whitehorse', country: 'Canada', industry: 'Automotive' },
-  { name: 'Minuteman Press', href: 'https://minuteman.com/', city: 'Calgary', country: 'Canada', industry: 'Printing & Marketing' },
-  { name: 'Global Grocers', href: 'https://www.facebook.com/globalgrocers/', city: 'Penticton', country: 'Canada', industry: 'Retail' }
+  { name: 'HiTech Advisors', href: '#', city: 'Seattle', country: 'USA', industry: 'Cybersecurity' },
+  { name: 'Net Solutions', href: 'https://www.netsolutions.com/', city: 'Toronto', country: 'Canada', industry: 'Managed IT' },
+  { name: 'Territorial Auto', href: 'https://www.territorialauto.ca/', city: 'Whitehorse', country: 'Canada', industry: 'Cloud' },
+  { name: 'Minuteman Press', href: 'https://minuteman.com/', city: 'Calgary', country: 'Canada', industry: 'Automation' },
+  { name: 'Global Grocers', href: 'https://www.facebook.com/globalgrocers/', city: 'Penticton', country: 'Canada', industry: 'Managed IT' }
 ];
 
 export const hero = {

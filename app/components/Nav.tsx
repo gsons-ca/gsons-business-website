@@ -55,7 +55,7 @@ export default function Nav() {
         { name: 'Cloud Identity', links: [{ title: 'Cloud Providers', desc: 'Expertise across major cloud platforms.' }, { title: 'Identity Mgmt', desc: 'Secure access control for cloud resources.' }] }
       ]
     },
-    'Cyber': {
+    'Cybersecurity': {
       subCategories: [
         { name: 'Threat Detection', links: [{ title: 'Managed EDR', desc: '24/7 endpoint detection and response.' }, { title: 'MDR Services', desc: 'Real-time threat hunting and mitigation.' }, { title: 'Managed SOC', desc: 'Security Operations Center as a Service.' }] },
         { name: 'Network Defense', links: [{ title: 'Managed Firewall', desc: 'Perimeter protection and secure VPNs.' }, { title: 'Advanced Firewalls', desc: 'Next-gen protection against modern threats.' }, { title: 'Network Security', desc: 'Comprehensive defense for your local network.' }] },
@@ -63,6 +63,67 @@ export default function Nav() {
         { name: 'Security Strategy', links: [{ title: 'VCISO', desc: 'Expert security leadership without the overhead.' }, { title: 'Vendor Audit', desc: 'Assessing the security of your third-party partners.' }, { title: 'Security Awareness', desc: 'Empowering employees to spot cyber threats.' }] },
         { name: 'Technical Assessment', links: [{ title: 'Penetration Testing', desc: 'Ethical hacking to find system weaknesses.' }, { title: 'Security Assessment', desc: 'Identifying risks across your entire infrastructure.' }, { title: 'Vulnerability Mgmt', desc: 'Scanning for and patching security holes.' }] },
         { name: 'Advanced Protection', links: [{ title: 'SIEM', desc: 'Security Information and Event Management.' }, { title: 'Phishing Protection', desc: 'Blocking deceptive email-based attacks.' }, { title: 'Dark Web Monitoring', desc: 'Tracking leaked credentials on the dark web.' }] }
+      ]
+    },
+    'CRM & ERP': {
+      subCategories: [
+        { name: 'CRM Solutions', links: [
+          { title: 'HubSpot CRM', desc: 'The gold standard for scaling marketing and sales teams.' },
+          { title: 'Monday CRM', desc: 'Highly visual and customizable sales pipeline management.' },
+          { title: 'ClickUp CRM', desc: 'All-in-one productivity platform with native CRM features.' },
+          { title: 'Salesforce', desc: 'The world\'s #1 enterprise-grade customer success platform.' },
+          { title: 'Zoho CRM', desc: 'Comprehensive, budget-friendly suite for growing businesses.' }
+        ]},
+        { name: 'ERP Systems', links: [
+          { title: 'NetSuite (Oracle)', desc: 'The top cloud ERP used by high-growth Canadian firms.' },
+          { title: 'SAP Business One', desc: 'Powerful enterprise resource planning for mid-market scale.' },
+          { title: 'Sage Intacct', desc: 'Preferred choice for Canadian finance and accounting teams.' },
+          { title: 'ERPNext', desc: 'Flexible, open-source ERP for manufacturing and retail.' }
+        ]},
+        { name: 'Canadian Compliance', links: [
+          { title: 'CRA & Tax Integration', desc: 'Ensuring ERP/CRM data aligns with Canadian tax laws.' },
+          { title: 'PIPEDA Data Residency', desc: 'Storing customer data within Canadian borders for privacy.' },
+          { title: 'GST/HST Automation', desc: 'Real-time multi-province tax calculations and filing.' }
+        ]}
+      ]
+    },
+    'AI & Automations': {
+      subCategories: [
+        { name: 'Workflow Automation', links: [
+          { title: 'Zapier Integration', desc: 'Connecting 5,000+ apps to automate manual data entry.' },
+          { title: 'Make (Integromat)', desc: 'Complex, multi-step visual workflow design and automation.' },
+          { title: 'Custom API Bridges', desc: 'Bespoke code to link legacy software with modern apps.' },
+          { title: 'Microsoft Power Automate', desc: 'Automating tasks within the O365/Azure ecosystem.' },
+          { title: 'Business Process Mapping', desc: 'Consulting to identify and eliminate manual bottlenecks.' }
+        ]},
+        { name: 'AI Implementation', links: [
+          { title: 'Custom GPT Development', desc: 'Private, secure AI models trained on your business data.' },
+          { title: 'AI Copywriting Tools', desc: 'Automating content, emails, and marketing materials.' },
+          { title: 'Cognitive Search', desc: 'AI-powered internal search for company wikis and files.' },
+          { title: 'Predictive Analytics', desc: 'Using AI to forecast sales trends and inventory needs.' },
+          { title: 'AI Audio/Video Editing', desc: 'Automating media production for internal communications.' }
+        ]},
+        { name: 'Customer Experience AI', links: [
+          { title: 'Intelligent Chatbots', desc: '24/7 AI support agents that handle client inquiries.' },
+          { title: 'Sentiment Analysis', desc: 'AI monitoring of client feedback to detect satisfaction.' },
+          { title: 'Voice AI & IVR', desc: 'Automated, natural-sounding phone menu systems.' },
+          { title: 'Personalization Engines', desc: 'AI-driven product and service recommendations.' },
+          { title: 'Automated Appointment', desc: 'AI assistants that handle scheduling and rescheduling.' }
+        ]},
+        { name: 'Data & Document AI', links: [
+          { title: 'OCR Data Extraction', desc: 'AI that automatically reads and enters invoice data.' },
+          { title: 'Automated Reporting', desc: 'AI-generated executive summaries of weekly KPIs.' },
+          { title: 'Smart Document Audit', desc: 'AI scanning for errors or missing data in legal files.' },
+          { title: 'Automated Translation', desc: 'Real-time multi-language translation for global teams.' },
+          { title: 'Data Cleaning AI', desc: 'Automated deduplication and formatting of CRM data.' }
+        ]},
+        { name: 'Advanced AI Operations', links: [
+          { title: 'AI Security & Privacy', desc: 'Securing AI prompts and ensuring data isn\'t leaked.' },
+          { title: 'Machine Learning Ops', desc: 'Deploying and managing custom business ML models.' },
+          { title: 'Edge AI Computing', desc: 'Processing AI data locally on devices for low latency.' },
+          { title: 'RPA (Bot Services)', desc: 'Robotic Process Automation for legacy desktop software.' },
+          { title: 'AI Ethics & Governance', desc: 'Ensuring unbiased and compliant use of AI tools.' }
+        ]}
       ]
     },
     'Industries': {
