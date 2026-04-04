@@ -21,7 +21,7 @@ export const hero = {
   title: 'Managed IT services built for reliability and growth.',
   copy:
     'GSons IT Solutions delivers 24/7 IT infrastructure management, security operations, and helpdesk support with transparent SLAs and proactive improvement cycles.',
-  tagline: 'Leading provider of exceptional client-centric IT managed services.',
+  tagline: 'Trusted IT partner for Canadian Businesses. ',
   ctaLabel: 'Get a custom plan'
 };
 
