@@ -308,7 +308,7 @@ export default function Nav() {
                 )}
               </div>
             ))}
-            <div className="pt-4 flex flex-col space-y-4">
+            <div className="pt-2 flex flex-col space-y-2">
                <Link href="/resources" className="font-bold text-gray-700 py-1 px-1">Resources</Link>
                <Link href="/remote-support" className="font-bold text-gray-700 py-1 px-1">Remote Support</Link>
 <a 
