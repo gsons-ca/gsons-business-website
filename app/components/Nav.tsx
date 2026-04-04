@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Nav() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -199,15 +200,30 @@ export default function Nav() {
           </button>
         </div>
 
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 text-gray-700">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {isMobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+       {/* Mobile Burger Button */}
+<button 
+  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+  className="lg:hidden p-3 -mr-2 text-gray-900 flex items-center justify-center"
+  aria-label="Toggle Menu"
+>
+  <div className="relative w-7 h-5 flex flex-col justify-between">
+    <motion.span
+      animate={isMobileMenuOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="w-full h-0.5 bg-current rounded-full"
+    />
+    <motion.span
+      animate={isMobileMenuOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+      transition={{ duration: 0.2 }}
+      className="w-full h-0.5 bg-current rounded-full"
+    />
+    <motion.span
+      animate={isMobileMenuOpen ? { rotate: -45, y: -9 } : { rotate: 0, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="w-full h-0.5 bg-current rounded-full"
+    />
+  </div>
+</button>
       </nav>
 
       <div className="hidden lg:block">
