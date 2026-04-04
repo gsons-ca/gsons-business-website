@@ -79,7 +79,7 @@ export default function Hero({
               </Button>
             )}
           </div>
-          <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          <div className="hidden sm:flex flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
             {heroHighlights.map(item => {
               const Icon = item.icon;
               return (
