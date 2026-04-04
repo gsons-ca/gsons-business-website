@@ -255,7 +255,7 @@ export default function Nav() {
 
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-t shadow-xl overflow-y-auto max-h-[calc(100vh-64px)] z-[110]">
-          <div className="p-4 space-y-2">
+          <div className="p-3 space-y-2">
             {Object.keys(megaMenuContent).map((item) => (
               <div key={item} className="border-b last:border-0 pb-2">
                 <button
