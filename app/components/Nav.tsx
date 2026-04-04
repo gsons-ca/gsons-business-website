@@ -195,9 +195,16 @@ export default function Nav() {
         <div className="hidden lg:flex items-center space-x-6 text-[13px] font-medium text-gray-700">
           <Link href="/resources" className="hover:text-black">Resources</Link>
           <Link href="/remote-support" className="hover:text-black">Remote Support</Link>
-          <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
-            Book Consultation
-          </button>
+         <a 
+  href="https://calendly.com/info-gsons-ca/30min" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-block"
+>
+  <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
+    Book Consultation
+  </button>
+</a>
         </div>
 
        {/* Mobile Burger Button */}
@@ -304,8 +311,16 @@ export default function Nav() {
             <div className="pt-4 flex flex-col space-y-4">
                <Link href="/resources" className="font-bold text-gray-700 px-1">Resources</Link>
                <Link href="/remote-support" className="font-bold text-gray-700 px-1">Remote Support</Link>
-               <button className="w-full bg-black text-white py-4 rounded-md font-bold tracking-tight">BOOK CONSULTATION</button>
-            </div>
+<a 
+  href="https://calendly.com/info-gsons-ca/30min" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-block"
+>
+  <button className="bg-black text-white h-10 px-6 text-sm rounded-full font-semibold hover:bg-gray-800 transition-colors">
+    Book Consultation
+  </button>
+</a>        </div>
           </div>
         </div>
       )}
